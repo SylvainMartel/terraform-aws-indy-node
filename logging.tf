@@ -1,5 +1,5 @@
 resource "aws_flow_log" "candy_flow" {
-  iam_role_arn    = aws_iam_role.example.arn
+  iam_role_arn    = aws_iam_role.candy_flow.arn
   log_destination = aws_cloudwatch_log_group.candy_flow.arn
   traffic_type    = "ALL"
   vpc_id          = aws_vpc.node_vpc.id
